@@ -55,7 +55,7 @@ def filter_by_age():
     # Return the filtered data as JSON
     return jsonify(filtered_data.to_dict(orient='records'))
     
-# Route to filter players by PTS
+# Route to filter players by stats
 @app.route('/players/top', methods=['GET'])
 def get_top_players():
     stat = request.args.get('stat') # stats to sort are PTS, TRB, and AST
